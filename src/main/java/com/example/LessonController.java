@@ -18,7 +18,8 @@ public class LessonController {
 
     @PostMapping("")
     public Lesson create(@RequestBody Lesson lesson) {
-        return this.repository.save(lesson);
+        this.repository.save(lesson);
+        return lesson;
     }
 
 }
